@@ -1,0 +1,35 @@
+@startuml
+
+abstract class Component
+class ConcreteComponent
+abstract class Decorator
+class ConcreteDecorator
+
+Component <|-- ConcreteComponent
+Component <|-- Decorator
+Decorator o--> Component
+Decorator <|-- ConcreteDecorator
+
+class Component {
+{abstract} method1()
+{abstract} method2()
+{abstract} method3()
+}
+
+class ConcreteComponent {
+method1()
+method2()
+method3()
+}
+
+abstract class Decorator {
+component
+}
+
+class ConcreteDecorator {
+method1()
+method2()
+method3()
+}
+
+@enduml
